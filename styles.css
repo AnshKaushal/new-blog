@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono&family=Inter&family=Kalam:wght@300;400;700&display=swap');
+
+body {
+  color: #efefef;
+  background-color: #0a0a0a;
+  font-family: 'Inter',sans-serif;
+}
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0a0a0a;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #efefef;
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#preloader.fade-out {
+  opacity: 0;
+}
+
+#loading-text {
+  opacity: 1;
+  animation: fadeOut 0.5s linear forwards 2s;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.container {
+  width: 1280px;
+  margin: 5rem auto;
+  padding: 2rem;
+}
+
+.container h1 {
+  text-align: center;
+  font-family: 'DM Mono', monospace;
+}
+
+.container h2 {
+  transition: color 0.3s ease-in-out linear;
+}
+
+.container h2:hover {
+  cursor: pointer;
+  color: red;
+}
+
+#postsContainer, #postContainer {
+  width: 800px;
+  margin: 3rem auto;
+}
+
+#postContainer p {
+  margin-top: 3rem;
+}
+
+header {
+  width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+ul {
+  display: inline-flex;
+  gap: 50px;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+ul li {
+  list-style: none;
+}
+
+ul li a {
+  text-decoration: none;
+  color: red;
+  font-size: 1.2rem;
+}
+
+ul li a:hover {
+  color: #0ff;
+}
+
+@media screen and (max-width:768px) {
+  header {
+    width: 90vw;
+    font-size: 1rem;
+  }
+}
