@@ -28,7 +28,7 @@
         return null;
       }
 
-      const response = await fetch(`https://blog-data.anshkaushal.codes/api/post?post=${postId}`);
+      const response = await fetch(`https://data.anshkaushal.codes/api/post?post=${postId}`);
       const postData = await response.json();
       return postData.post;
     }
